@@ -36,6 +36,7 @@ public class Rechenoperationsliste {
             for (Rechenoperation operation : rechenoperationList) {
                 tmp = operation.berechne(tmp);
             }
+            //Für jeden Wert in feld wird jede Rechenoperation ausgeführt und dem result Array hinzugefügt.
             res[i] = tmp;
         }
         return res;
