@@ -6,4 +6,8 @@ public class GefangenenDilemma {
         this.p1 = p1;
         this.p2 = p2;
     }
+
+    public void spiele(int zuege) {
+
+    }
 }
