@@ -9,6 +9,10 @@ public class Spite implements GefangenenStrategie {
         this.cooperate = true;
     }
 
+    /**
+     * Kooperiert solange, bis der Mitspieler zum ersten Mal verrät. Verrät danach immer.
+     * @return
+     */
     @Override
     public boolean getNextDecision() {
         return cooperate;

@@ -1,6 +1,9 @@
 import implementations.*;
 
 public class DasSpiel {
+    /**
+     * Test der Klasse GefangenenDilemma
+     */
     public static void main(String[] args) {
         //Neues Objekt vom Typ GefangenenDilemma mit 2 Spielern
         GefangenenDilemma gd = new GefangenenDilemma(

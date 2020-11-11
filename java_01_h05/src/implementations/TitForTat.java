@@ -10,6 +10,10 @@ public class TitForTat implements GefangenenStrategie {
         this.round = 0;
     }
 
+    /**
+     * Kooperiert in der ersten Runde und kopiert in den nächsten Runden den vorherigen Spielzug des Spielpartners.
+     * @return
+     */
     @Override
     public boolean getNextDecision() {
         if(round++ == 0) return true;

@@ -11,6 +11,10 @@ public class Pavlov implements GefangenenStrategie {
         this.round = 0;
     }
 
+    /**
+     * Kooperiert in der ersten Runde und verrät, falls der vorherige Zug des Mitspielers anders als der eigene war.
+     * @return
+     */
     @Override
     public boolean getNextDecision() {
         if(round++ == 0) return true;

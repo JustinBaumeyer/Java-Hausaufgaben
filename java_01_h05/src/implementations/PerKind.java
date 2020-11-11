@@ -9,6 +9,10 @@ public class PerKind implements GefangenenStrategie {
         this.n = 1;
     }
 
+    /**
+     * Spielt periodisch die Folge kooperieren/kooperieren/verraten.
+     * @return
+     */
     @Override
     public boolean getNextDecision() {
         return !(n++ % 3 == 0);

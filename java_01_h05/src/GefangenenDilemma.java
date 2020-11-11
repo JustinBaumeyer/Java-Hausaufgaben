@@ -2,11 +2,22 @@ import interfaces.GefangenenStrategie;
 
 public class GefangenenDilemma {
     GefangenenStrategie player1,player2;
+
+    /**
+     * Nimmt zur initialisierung die Strategien der beiden Spieler.
+     * @param p1 Strategie Spieler 1
+     * @param p2 Strategie Spieler 2
+     */
     public GefangenenDilemma(GefangenenStrategie p1, GefangenenStrategie p2) {
         this.player1 = p1;
         this.player2 = p2;
     }
 
+    /**
+     * Vergibt die Strafpunkte je nach Entscheidung der Strategien der jeweiligen Spieler
+     * und verkündet am Ende den Gewinner.
+     * @param n Die Anzahl der Spielzüge, die gespielt werden sollen.
+     */
     public void spiele(int n) {
         int p1 = 0, p2 = 0;
         boolean t1,t2;
@@ -27,6 +38,7 @@ public class GefangenenDilemma {
                 p2 += 6;
                 p1 += 1;
             }
+
 
             player1.setOpponentsLastDecision(t2);
             player2.setOpponentsLastDecision(t1);
