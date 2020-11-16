@@ -1,3 +1,4 @@
+import java.util.Comparator;
 
 public class Test {
 	public static void main(String[] args) {
@@ -37,5 +38,6 @@ public class Test {
 		ergebnis = " schlaegt ";
 		}
 		System.out.println(b1 + ergebnis + b2);
+
 		}
 }
