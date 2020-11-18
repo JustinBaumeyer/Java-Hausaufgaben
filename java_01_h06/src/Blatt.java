@@ -37,7 +37,7 @@ public class Blatt {
 		IntStream.of(this.values).forEach(i -> {
 				res.put(i,Optional.ofNullable(res.get(i)).orElse(0)+1);
 		});
-		return res.entrySet().stream().max(Map.Entry.comparingByValue()).get();
+		return res.entrySet().stream().max(Map.Entry.comparingByValue()).orElseThrow();
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class Blatt {
 	public int getAdditionalCard() {
 		Map.Entry<Integer,Integer> res = getMaxDuplicates();
 		if(res.getValue() == values.length) return res.getKey();
-		return IntStream.of(this.values).filter(x -> x != res.getKey()).limit(1).toArray()[0];
+		return IntStream.of(this.values).filter(x -> x != res.getKey()).findFirst().orElseThrow();
 	}
 
 	/**
