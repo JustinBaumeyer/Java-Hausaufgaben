@@ -9,6 +9,7 @@ import java.util.stream.IntStream;
 
 public class Schiebepuzzle {
     private int[][] tiles;
+    final boolean BETTER_OUTPUT = false;
 
     /**
      * Erzeugt das Schiebepuzzle mit den Startwerten 1-15.
@@ -134,14 +135,17 @@ public class Schiebepuzzle {
      */
     @Override
     public String toString() {
-        StringBuilder out = new StringBuilder("");
+        StringBuilder out = new StringBuilder();
+        if(BETTER_OUTPUT) {
+            out.append("-".repeat(13)).append("\n");
+        }
         for (int[] tileRow : tiles) {
             out.append("|");
             for (int tileEntry : tileRow) {
                 out.append(tileEntry == 0 ? "  " : String.format("%2s", tileEntry)).append("|");
             }
             out.append("\n");
-            IntStream.range(0, 13).forEach(i -> out.append("-"));
+            out.append("-".repeat(13));
             out.append("\n");
         }
         return out.toString();
