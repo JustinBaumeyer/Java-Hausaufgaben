@@ -1,11 +1,11 @@
 package exceptions;
 
-public class WrongNumberException extends RuntimeException{
+/**
+ * WrongNumberException Klasse
+ */
+public class WrongNumberException extends RuntimeException {
     public WrongNumberException() {
-        super();
+        super("i liegt nicht zwischen 1 und 15");
     }
 
-    public WrongNumberException(String message) {
-        super(message);
-    }
 }
