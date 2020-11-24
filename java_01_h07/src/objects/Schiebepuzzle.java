@@ -70,8 +70,7 @@ public class Schiebepuzzle {
         for (int nextRow = Math.max(0, row - 1); nextRow <= Math.min(row + 1, 3); nextRow++) {
             for (int nextColumn = Math.max(0, col - 1); nextColumn <= Math.min(col + 1, 3); nextColumn++) {
                 //Filtert das übergebene Plättchen und die diagonalen Nachbarn heraus.
-                if (nextRow == row && nextColumn == col || ((Math.abs(row - nextRow) + Math.abs(col - nextColumn)) > 1))
-                    continue;
+                if (((Math.abs(row - nextRow) + Math.abs(col - nextColumn)) != 1)) continue;
                 if (tiles[nextRow][nextColumn] == 0) {
                     return new Point(nextRow, nextColumn);
                 }
