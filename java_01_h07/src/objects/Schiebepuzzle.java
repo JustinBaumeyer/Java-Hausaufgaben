@@ -5,7 +5,6 @@ import exceptions.WrongNumberException;
 
 import java.awt.*;
 import java.util.Random;
-import java.util.stream.IntStream;
 
 public class Schiebepuzzle {
     private int[][] tiles;
