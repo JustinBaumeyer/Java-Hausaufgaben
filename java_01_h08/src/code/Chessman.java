@@ -3,8 +3,6 @@ package code;
 import code.exceptions.WrongMoveException;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
 public abstract class Chessman {
     private Position position;
 

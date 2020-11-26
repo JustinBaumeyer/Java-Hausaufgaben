@@ -24,6 +24,6 @@ public class Rook extends Chessman {
 
     @Override
     public String toString() {
-        return "Rook: " + this.getPosition();
+        return "Turm: " + this.getPosition();
     }
 }
