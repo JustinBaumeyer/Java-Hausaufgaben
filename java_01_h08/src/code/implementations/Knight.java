@@ -10,6 +10,16 @@ public class Knight extends Chessman {
         super(pos);
     }
 
+    /**
+     * Gibt die moeglichen Positionen des Springers zurueck
+     * ------------------------------
+     * | - | X | - | X | - |
+     * | X | - | - | - | X |
+     * | - | - | S | - | - |
+     * | X | - | - | - | X |
+     * | - | X | - | X | - |
+     * @return
+     */
     @Override
     public ArrayList<Position> getMoveList() {
         ArrayList<Position> res = new ArrayList<>();
@@ -23,6 +33,9 @@ public class Knight extends Chessman {
         return res;
     }
 
+    /**
+     * @return Gibt die Schachfigur im Format 'Springer : {Position}' zurueck.
+     */
     @Override
     public String toString() {
         return "Springer: " + this.getPosition();

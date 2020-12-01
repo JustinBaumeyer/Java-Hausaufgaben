@@ -1,7 +1,10 @@
 package code.exceptions;
 
+/**
+ * Klasse WrongPositionException
+ */
 public class WrongPositionException extends RuntimeException {
     public WrongPositionException() {
-        super("Diese code.Position liegt nicht auf dem Brett!");
+        super("Diese Position liegt nicht auf dem Brett!");
     }
 }
