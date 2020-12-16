@@ -19,13 +19,13 @@ public class Zahlwort {
             "dodevigintillionen","dodevigintilliarden"};
 
     /**
-     * @param k Zahl, die ausgegeben werden soll
+     * @param x Zahl, die ausgegeben werden soll
      * @return Gibt die Zahl i als deutsches Zahlwort zurueck.
      * @throws ArithmeticException Wirft eine ArithmeticException, wenn die Zahl nicht im gewuenschten Bereich liegt
      */
-    public static String getZahlwort(int k) {
-        if (k < 1 || k > 9999) throw new ArithmeticException("i must be between 1 and 9999"); //☹
-        return getZahlwort(BigInteger.valueOf(k));
+    public static String getZahlwort(int x) {
+        if (x < 1 || x > 9999) throw new ArithmeticException("x must be between 1 and 9999"); //☹
+        return getZahlwort(BigInteger.valueOf(x));
     }
 
     /**
